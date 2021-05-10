@@ -1,0 +1,410 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Raleway:wght@400;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 34vh auto auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    grid-template-rows: 84px 40vh auto auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  nav {
+    grid-area: nav;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: 84px auto;
+    grid-template-areas: "nav nav nav nav nav nav" "main main main header header header" "footer footer footer header header header";
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+p {
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 576px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+.btn {
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  color: #0c0910;
+  border-color: #0c0910;
+  outline: none;
+  width: 80px;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.btn:focus {
+  border-color: #d1d1d1;
+  color: #ececec;
+}
+.btn:hover {
+  border-color: #d1d1d1;
+}
+
+@media screen and (min-width: 576px) {
+  .btn {
+    font-size: 16px;
+    padding: 1rem 1.8rem;
+  }
+}
+.nav {
+  position: relative;
+}
+.nav__brand {
+  position: absolute;
+  background: #0c0910;
+  color: #ffffff;
+  padding: 1.3rem 0.82rem;
+}
+.nav__logo {
+  font-family: "Old Standard TT", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.nav__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+.nav__list {
+  list-style-type: none;
+}
+.nav__item a {
+  display: block;
+  text-align: left;
+  padding: 0.8em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  color: #0c0910;
+}
+.nav__item a:hover {
+  color: #a6a5a8;
+}
+.nav__collapsible {
+  text-align: right;
+}
+.nav__collapsible label {
+  display: block;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.3rem;
+}
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .nav__container {
+  max-height: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .nav__brand {
+    padding: 1.7rem 1rem;
+  }
+
+  .nav__logo {
+    font-size: 30px;
+  }
+
+  .nav__collapsible label {
+    display: none;
+  }
+
+  .nav__container {
+    max-height: 100%;
+    padding: 1.5rem 1.8rem;
+    overflow: visible;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav__item a {
+    padding: 0.5rem 1.8rem;
+  }
+}
+.header {
+  background-image: url("../img/modelo.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-position: 0% 5%;
+  background-size: cover;
+}
+
+@media screen and (min-width: 576px) {
+  .header {
+    background-position: 0% 20%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    background-position: 0% 10%;
+    width: 60vw;
+  }
+}
+.about {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about__text {
+  color: #646266;
+  font-weight: 400;
+}
+.about__text span {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .about {
+    padding: 2rem 4rem;
+  }
+
+  .about__text span {
+    display: inline;
+  }
+}
+.footer {
+  background: #0c0910;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: auto 40px;
+  align-items: center;
+}
+.footer__left {
+  padding: 1rem 2rem;
+}
+.footer__right {
+  background: #ffffff;
+  color: #0c0910;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.footer__title {
+  font-size: 20px;
+}
+.footer__text {
+  font-family: "Old Standard TT", serif;
+  font-size: 12px;
+  padding: 0.5rem 0;
+}
+.footer input {
+  padding: 0.42rem;
+  display: inline;
+  width: 92%;
+}
+.footer a {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+@media screen and (min-width: 576px) {
+  .footer {
+    grid-template-columns: auto 50px;
+  }
+  .footer__left {
+    padding: 2rem 4rem;
+  }
+  .footer__title {
+    font-size: 30px;
+  }
+  .footer__text {
+    font-size: 14px;
+  }
+  .footer a {
+    font-size: 20px;
+  }
+  .footer input {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

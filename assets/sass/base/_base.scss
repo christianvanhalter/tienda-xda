@@ -1,0 +1,45 @@
+body {
+  font-family: $raleway;
+  font-size: $medium;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 34vh auto auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+//@media screen and (min-width: 576px)
+@include minPhone {
+  body {
+    grid-template-rows: 84px 40vh auto auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    grid-area: nav;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: 84px auto;
+    grid-template-areas:
+      "nav nav nav nav nav nav"
+      "main main main header header header"
+      "footer footer footer header header header";
+  }
+}

@@ -1,0 +1,27 @@
+.about {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__text {
+    color: $granite-gray;
+    font-weight: $regular;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+//@media screen and (min-width: 576px)
+@include minPhone {
+  .about {
+    padding: 2rem 4rem;
+  }
+  .about__text {
+    span {
+      display: inline;
+    }
+  }
+}

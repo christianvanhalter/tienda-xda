@@ -1,0 +1,72 @@
+.footer {
+  background: $smoky-black;
+  color: $white;
+  display: grid;
+  grid-template-columns: auto 40px;
+  align-items: center;
+
+  &__left {
+    padding: 1rem 2rem;
+  }
+
+  &__right {
+    background: $white;
+    color: $smoky-black;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: $x-large;
+  }
+
+  &__text {
+    font-family: $old-standard;
+    font-size: $x-small;
+    padding: 0.5rem 0;
+  }
+
+  input {
+    padding: 0.42rem;
+    display: inline;
+    width: 92%;
+  }
+
+  a {
+    font-family: $old-standard;
+    font-weight: $bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+}
+
+//@media screen and (min-width: 576px)
+@include minPhone {
+  .footer {
+    grid-template-columns: auto 50px;
+
+    &__left {
+      padding: 2rem 4rem;
+    }
+
+    &__title {
+      font-size: $xx-large;
+    }
+
+    &__text {
+      font-size: $small;
+    }
+
+    a {
+      font-size: $x-large;
+    }
+
+    input {
+      width: 95%;
+    }
+  }
+}
